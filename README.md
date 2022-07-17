@@ -21,7 +21,8 @@ Downloads: Vídeos, Músicas, Playlists
 - Fazer o donwload de qualquer conteúdo privádo ou restrito a idade;
 - Logar em uma conta do google;
 - Fazer o donwload de alguns vídeos muito grandes na melhor qualidade;
-- Definir um diretório específico para o download e com isso, <br/>verificar se o disco local especificado existe e a sintaxe do nome dos diretórios.
+- Definir um diretório específico para o download e com isso, <br/>verificar se o disco local especificado existe e a sintaxe do nome dos diretórios;
+- Mostrar uma barra de progresso para acompanhar o download.
 
 ### Sobre o Projeto:
 
@@ -53,3 +54,9 @@ os.system('cls')
 
 Ela está la para limpar o cmd, portanto se estiver utilizando MacOs ou Linux,<br/>
 basta apagar estas linhas ou substituir seus comandos.
+
+### Script em funcionamento:
+
+###### Neste exemplo estarei fazendo o download de um vídeo.
+
+![exemplo](https://user-images.githubusercontent.com/108354947/179423866-5b611938-d53a-4438-b51a-b496b2ecd1c2.gif)
