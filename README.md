@@ -40,7 +40,7 @@ download de conteúdos livres do Youtube
 ### Utilização:
 
 Se você ja tem pytohn instalado em sua máquina, basta baixar os arquivos .py deste repositório e abrir o 'YT_Downloader.py'.<br/>
-Se não, posso estar deixando um executável aqui, basta abrir e utilizar.
+Se não, estarei deixando um executável [aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe), basta abrir e utilizar.
 
 ### Aviso importante:
 
