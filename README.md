@@ -25,11 +25,11 @@ Downloads: Vídeos, Músicas, Playlists
 
 ### Sobre o Projeto:
 
-Procurei utilizar o máximo do que conheço em bibliotecas python (e que fazem sentido para este projeto)<br/>
+Procurei utilizar o máximo do que conheço em bibliotecas, funcionalidades etc (e que fazem sentido para este projeto)<br/>
 até o momento desta publicação (17/07/2022).<br/> 
 
 A base para este projeto foi a biblioteca [Pytube](https://pypi.org/project/pytube/), que oferece meios simples e claros para o <br/>
-download de conteúdos livres do Youtube
+download de conteúdos livres do Youtube.
 
 ### Obejtivos do Projeto:
 
