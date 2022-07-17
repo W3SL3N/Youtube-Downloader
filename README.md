@@ -21,7 +21,7 @@ Downloads: Vídeos, Músicas, Playlists
 - Fazer o donwload de qualquer conteúdo privádo ou restrito a idade;
 - Logar em uma conta do google;
 - Fazer o donwload de alguns vídeos muito grandes na melhor qualidade;
-- Definir um diretório especifico para o download.
+- Definir um diretório específico para o download e com isso, <br/>verificar se o disco local especificado existe e a sintaxe do nome dos diretórios.
 
 ### Sobre o Projeto:
 
