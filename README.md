@@ -15,14 +15,14 @@ Downloads: Vídeos, Músicas, Playlists
 - Fazer downloads de arquivos .mp4 (e selecionar a qualidade destes);
 - Fazer downloads de arquivos .mp3 (e selecionar a qualidade destes);
 - Fazer o download de playlists (cuja a qualidade destas está automaticamente apontada para o máximo.
+- Definir um diretório específico para o download e com isso, <br/>verificar se o disco local especificado existe e a sintaxe do nome dos diretórios;
+- Mostrar uma barra de progresso para acompanhar o download.
 
 ### Este script não é capaz de:
 
 - Fazer o donwload de qualquer conteúdo privádo ou restrito a idade;
 - Logar em uma conta do google;
 - Fazer o donwload de alguns vídeos muito grandes na melhor qualidade;
-- Definir um diretório específico para o download e com isso, <br/>verificar se o disco local especificado existe e a sintaxe do nome dos diretórios;
-- Mostrar uma barra de progresso para acompanhar o download.
 
 ### Sobre o Projeto:
 
