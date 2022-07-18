@@ -26,5 +26,3 @@ class Progresso:
 
         sys.stdout.write(barra)
         sys.stdout.flush()
-
-# {baixado:0.2f}/{filesize:0.2f} MB
