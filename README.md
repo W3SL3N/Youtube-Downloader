@@ -1,62 +1,82 @@
 # Youtube-Downloader
-Downloads: Vídeos, Músicas, Playlists
+![Status do Projeto: Desenvolvimento](https://img.shields.io/badge/Status-Desenvolvimento-brightgreen)
+![Meu Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FW3SL3N%3Ft%3DvIAn_ZM-aav4rIweWPtNaw%26s%3D09)
 
-### Motivações do projeto:
+*Um script Python baseado em Pytube para o download de áudios, vídeos e playlists, de maneira clara, amigável e objetiva.*
 
-###### Gostaria de deixar esclarecidas algumas coisas<br/>antes de prosseguir com as explicações do meu script.
+### :gear: Funcionalidades:
 
-- Iniciei o projeto para fins de estudos e testes das minhas habilidades.
-- Os downloaders online existentes não são muito confiaveis então porque não fazer o meu?
+- `.mp4`:  Fazer downloads de arquivos **.mp4** (e selecionar a qualidade destes);
+- `.mp3`:  Fazer downloads de arquivos **.mp3** (e selecionar a qualidade destes);
+- `playlists`:  Fazer o download de **playlists** (cuja a qualidade destas está automaticamente apontada para o máximo.
+- `diretórios`:  Permitir que o usuário **defina um diretório** para o seu donwload;
+- `verificações de entrada`:  Verificar se as **entradas do usuário são válidas**; 
+- `barra de progresso`:  Mostrar uma barra de progresso para **acompanhar o download**.
+- `Avisos de conexão`:  Avisa ao usuário se sua conexão for **perdidada ou interrompida**.
 
-###### Isso foi o que me bastou para prosseguir.
+### :books: Bibliotecas utilizadas:
 
-### Este script é capaz de:
+`Pytube`
+`os`
+`sys`
+`re`
+`time`
+`urllib`
+`http.client`
 
-- Fazer downloads de arquivos .mp4 (e selecionar a qualidade destes);
-- Fazer downloads de arquivos .mp3 (e selecionar a qualidade destes);
-- Fazer o download de playlists (cuja a qualidade destas está automaticamente apontada para o máximo.
-- Definir um diretório específico para o download e com isso, <br/>verificar se o disco local especificado existe e a sintaxe do nome dos diretórios;
-- Mostrar uma barra de progresso para acompanhar o download.
+### :file_folder: Acesso ao projeto:
 
-### Este script não é capaz de:
+Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20Downloader) para acessar o diretório com os arquivos do projeto.
 
-- Fazer o donwload de qualquer conteúdo privádo ou restrito a idade;
-- Logar em uma conta do google;
-- Fazer o donwload de alguns vídeos muito grandes na melhor qualidade;
+### :arrow_forward: Rodar o projeto:
 
-### Sobre o Projeto:
+#### Primeiro método 
+###### (recomendado para devs que queiram fazer alterações nos arquivos)
 
-Procurei utilizar o máximo do que conheço em bibliotecas, funcionalidades etc (e que fazem sentido para este projeto)<br/>
-até o momento desta publicação (17/07/2022).<br/> 
+1° - Tenha a última versão do Python em sua máquina, caso contrario, baixe e instale seguindo as intruções do [site oficial do python](https://www.python.org/).<br/>
+2° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.zip).<br/>
+3° - Extraia todos para o mesmo diretorio utilizando o programa de sua preferência.<br/>
+4° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
+5° - Faça bom uso da sua nova ferramenta.
 
-A base para este projeto foi a biblioteca [Pytube](https://pypi.org/project/pytube/), que oferece meios simples e claros para o <br/>
-download de conteúdos livres do Youtube.
+#### Segundo método 
+###### (recomendado para quem quer utilizar a ferramenta em seu estádo atual)
 
-### Obejtivos do Projeto:
+1° - Baixe o **YT_Downloader.exe** [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe).<br/>
+2° - Abra-o em sua máquina.<br/>
+3° - Faça bom uso da sua nova ferramenta.<br/>
 
-- Manter qualidade no código, separando responsabilidades em diferentes arquivos, <br/>afim de poder fazer alterações e correções facilmente;
-- Interação amigável e clara para o usuário final;
-- Tratar erros sem que eles fechassem abruptamente o script.
+### :warning: Aviso importante:
 
-### Utilização:
-
-Se você ja tem python instalado em sua máquina, basta baixar os arquivos .py deste repositório e abrir o 'YT_Downloader.py'.<br/>
-Se não, estou deixando um executável [aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe), basta abrir e utilizar.
-
-### Aviso importante:
-
-Este projeto possui funcionalidades que só funcionarão no windows<br/>
-como por exemplo a seguinte linha no arquivo cabecalho.py:
+Para usuários Linux ou MacOs, alterar a linha 6 do arquivo cabecalho.py, que está assim:
 
 ```
 os.system('cls')
 ```
 
-Ela está la para limpar o cmd, portanto se estiver utilizando MacOs ou Linux,<br/>
-basta apagar estas linhas ou substituir seus comandos.
+Altere para:
 
-### Script em funcionamento:
+```
+os.system('clear')
+```
+
+### :jigsaw: Obejtivos do Projeto:
+
+- Consolidar conhecimentos e praticar habilidades em Python;
+- Manter qualidade no código, separando responsabilidades em diferentes arquivos, <br/>afim de poder fazer alterações e correções facilmente;
+- Interagir de forma amigável e clara com o usuário final;
+- Tratar erros sem que eles fechassem abruptamente o script.
+
+### :hammer_and_wrench: Tecnonologias utilizadas:
+
+- `Python`
+- `Pycharm`
+- `paradigma de orientação a objetos`
+
+### :fast_forward: Script em funcionamento:
 
 ###### Neste exemplo estarei fazendo o download de um vídeo.
 
 ![exemplo](https://user-images.githubusercontent.com/108354947/179423866-5b611938-d53a-4438-b51a-b496b2ecd1c2.gif)
+
+
