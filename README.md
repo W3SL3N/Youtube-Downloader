@@ -2,7 +2,17 @@
 ![Status do Projeto: Desenvolvimento](https://img.shields.io/badge/Status-Desenvolvimento-brightgreen)
 ![Meu Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FW3SL3N%3Ft%3DvIAn_ZM-aav4rIweWPtNaw%26s%3D09)
 
-*Um script Python baseado em Pytube para o download de áudios, vídeos e playlists, de maneira clara, amigável e objetiva.*
+*Um script Python baseado em Pytube para o download de áudios, vídeos e playlists, do Youtube de maneira clara, amigável e objetiva.*
+
+## Índice:
+- [Funcionalidades](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#gear-funcionalidades)
+- [Bibliotecas utilizadas](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#books-bibliotecas-utilizadas)
+- [Acesso ao projeto](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#file_folder-acesso-ao-projeto)
+- [Rodar o projeto](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#arrow_forward-rodar-o-projeto)
+- [Aviso importante](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#warning-aviso-importante)
+- [Obejtivos do projeto](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#jigsaw-obejtivos-do-projeto)
+- [Tecnologias utilizadas](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#hammer_and_wrench-tecnonologias-utilizadas)
+- [Script em funcionamento](https://github.com/W3SL3N/Youtube-Downloader/edit/main/README.md#fast_forward-script-em-funcionamento)
 
 ### :gear: Funcionalidades:
 
@@ -60,7 +70,7 @@ Altere para:
 os.system('clear')
 ```
 
-### :jigsaw: Obejtivos do Projeto:
+### :jigsaw: Obejtivos do projeto:
 
 - Consolidar conhecimentos e praticar habilidades em Python;
 - Manter qualidade no código, separando responsabilidades em diferentes arquivos, <br/>afim de poder fazer alterações e correções facilmente;
