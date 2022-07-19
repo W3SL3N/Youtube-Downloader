@@ -54,7 +54,7 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 
 1° - Baixe o **YT_Downloader.exe** [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe).<br/>
 2° - Abra-o em sua máquina.<br/>
-3° - Se aparecer o aviso 'O Windows protegeu o computador', clique em 'Mais informações' e 'Executar assim mesmo'.
+3° - Se aparecer o aviso 'O Windows protegeu o computador', clique em 'Mais informações' e 'Executar assim mesmo'.<br/>
 4° - Faça bom uso da sua nova ferramenta.<br/>
 
 
