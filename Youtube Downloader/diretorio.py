@@ -1,6 +1,4 @@
 import os
-from urllib.error import URLError
-from http.client import IncompleteRead, RemoteDisconnected
 
 class Diretorio():
 
@@ -26,26 +24,31 @@ class Diretorio():
 
     def diretorio(self, nome):
 
-        print(f'\nPasta padrão para o download: C:\YT Downloader\\{nome}')
+        amarelo = '\033[1;33m'
+        reset = '\033[0;0m'
+
+        print(f'\nPasta padrão para o download: D:\YT Downloader\\{nome}')
 
         cond = 0
 
         while cond == 0:
+
             sim = ['sim', 's']
             nao = ['não', 'nao', 'n']
-            pergunta = input('Mudar pasta? (S/n): ').lower().strip()
+            pergunta = input('Mudar pasta?' + (amarelo + '(S/n)' + reset) + ': ').lower().strip()
 
-            diretorio = f'C:\\YT Downloader\\{nome}'
+            diretorio = f'D:\\YT Downloader\\{nome}'
 
             if pergunta in nao:
-                cond += 1
+                return diretorio
 
             if pergunta in sim:
                 cond = 0
 
                 while cond == 0:
 
-                    diretorio = (input('\033[1;33m' + '\n>>> ' + '\033[0;0m').strip())
+                    diretorio = (input(amarelo + '\n>>> ' + reset).strip())
+
 
                     existe_disco = Diretorio.existe_disco(diretorio)
 
@@ -54,17 +57,21 @@ class Diretorio():
 
                         if verifica_sintaxe == True:
                             return diretorio
-                            cond += 1
+
                         else:
                             print('\nO nome da pasta não pode conter esses caracteres:', ':', '*', '?', '"', "'", '<', '>',
                                   '|')
                             continue
 
-                    if not existe:
+                    if not existe_disco:
                         print('\nO disco local informado não existe...')
                         continue
+
+                    cond += 1
 
             else:
                 continue
 
-        return diretorio
+            cond += 1
+
+
