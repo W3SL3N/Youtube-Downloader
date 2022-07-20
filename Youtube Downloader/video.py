@@ -86,6 +86,9 @@ class UmVideo(Continuar, Diretorio, Progresso, Cabecalho):
             self.continuar(classe=UmVideo)
 
     def qualidades(self, dict):
+        amarelo = '\033[1;33m'
+        reset = '\033[0;0m'
+        
         print(f'\nTítulo: {YouTube(self.url).title}')
 
         print('\nQualidades disponíveis:\n')
@@ -94,7 +97,7 @@ class UmVideo(Continuar, Diretorio, Progresso, Cabecalho):
             linha = dict[itag]
             padrao = '(")[\d]{3,4}(p)(")'
             procura = re.search(padrao, str(linha))
-            sys.stdout.write(f'|{procura.group()}'.replace('"', ' '))
+            sys.stdout.write('|' + (amarelo + f'{procura.group()}' + reset).replace('"', ' '))
         sys.stdout.write('|\n\n')
 
     def opcao(self, dict):
