@@ -33,8 +33,12 @@ class Musica(Cabecalho):
 
             if define in sim:
                 playlist = PlaylistMus()
+                cond += 1
+                
             if define in nao:
                 musica = UmaMusica()
+                cond += 1
+                
             else:
                 continue
 
