@@ -1,6 +1,6 @@
 import os
 
-class Diretorio():
+class Diretorio:
 
     @staticmethod
     def existe_disco(disco):
