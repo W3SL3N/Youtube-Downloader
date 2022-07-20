@@ -17,29 +17,29 @@
 ### :gear: Funcionalidades:
 
 - `.mp4`:  Fazer downloads de arquivos **.mp4** (e selecionar a qualidade destes);
-![image](https://user-images.githubusercontent.com/108354947/180067412-faa8c1d2-4e1f-4786-b11b-553c71f5963b.png)
+![download de um .mp4](https://user-images.githubusercontent.com/108354947/180067412-faa8c1d2-4e1f-4786-b11b-553c71f5963b.png)
 
 - `.mp3`:  Fazer downloads de arquivos **.mp3** (e selecionar a qualidade destes);
-![image](https://user-images.githubusercontent.com/108354947/180072545-a1abdf93-c5bf-4b46-8cc1-1802dead4021.png)
+![download de um .mp3](https://user-images.githubusercontent.com/108354947/180072545-a1abdf93-c5bf-4b46-8cc1-1802dead4021.png)
 
-- `playlists`:  Fazer o download de **playlists** de **.mp3** e **.mp4** (cuja a qualidade destas está automaticamente apontada para o máximo.
-![image](https://user-images.githubusercontent.com/108354947/180073563-b8df7208-4e25-4992-963a-4875216b9e15.png)
+- `playlists`:  Fazer o download de **playlists** de **.mp3** e **.mp4** <br/>(cuja a qualidade destas está automaticamente apontada para o máximo)
+![download de uma playlist](https://user-images.githubusercontent.com/108354947/180073563-b8df7208-4e25-4992-963a-4875216b9e15.png)
 
-- `diretórios`:  Permitir que o usuário **defina um diretório** para o seu donwload;
-![image](https://user-images.githubusercontent.com/108354947/180068068-80166cd4-19da-4f7d-9013-bb26395f415c.png)
+- `diretórios`:  Permitir que o usuário **defina um diretório** para o seu download;
+![input para o usuário definir um diretório](https://user-images.githubusercontent.com/108354947/180068068-80166cd4-19da-4f7d-9013-bb26395f415c.png)
 
 - `verificações de entrada`:  Verificar se as **entradas do usuário são válidas**; 
-![image](https://user-images.githubusercontent.com/108354947/180074013-8d8600f7-c670-4e51-9bf2-6478556a0414.png)
-![image](https://user-images.githubusercontent.com/108354947/180074327-ab2e081a-6ed5-4a88-b2c5-715692ee228f.png)
-![image](https://user-images.githubusercontent.com/108354947/180074679-85296772-8182-4487-8079-d4dcf1b174be.png)
+![mensagem de entrada inválida](https://user-images.githubusercontent.com/108354947/180074013-8d8600f7-c670-4e51-9bf2-6478556a0414.png)
+![mensagem de entrada inválida](https://user-images.githubusercontent.com/108354947/180074327-ab2e081a-6ed5-4a88-b2c5-715692ee228f.png)
+![mensagem de entrada inválida](https://user-images.githubusercontent.com/108354947/180074679-85296772-8182-4487-8079-d4dcf1b174be.png)
 
 - `barra de progresso`:  Mostrar uma barra de progresso com informações para **acompanhar o download**;
-![image](https://user-images.githubusercontent.com/108354947/180069500-650d5709-9062-422d-888f-4dedc65bdf65.png)
+![barra de progresso colorida](https://user-images.githubusercontent.com/108354947/180069500-650d5709-9062-422d-888f-4dedc65bdf65.png)
 
 - `Avisos de conexão`:  Avisa ao usuário se sua conexão for **perdidada ou interrompida**.
-![image](https://user-images.githubusercontent.com/108354947/180070398-aaff871c-7da2-48ec-8051-4c8ea6ffcda7.png)
-![image](https://user-images.githubusercontent.com/108354947/180072901-5e605ff6-7927-4d20-b219-dac5dbf3ae37.png)
-![image](https://user-images.githubusercontent.com/108354947/180069032-93a2d97c-ce39-4714-8ead-7e2fe029712a.png)
+![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180070398-aaff871c-7da2-48ec-8051-4c8ea6ffcda7.png)
+![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180072901-5e605ff6-7927-4d20-b219-dac5dbf3ae37.png)
+![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180069032-93a2d97c-ce39-4714-8ead-7e2fe029712a.png)
 
 ### :books: Bibliotecas utilizadas:
 
@@ -106,6 +106,6 @@ os.system('clear')
 
 ###### Neste exemplo estarei fazendo o download de um vídeo.
 
-![exemplo](https://user-images.githubusercontent.com/108354947/179423866-5b611938-d53a-4438-b51a-b496b2ecd1c2.gif)
+![script em funcionamento](https://user-images.githubusercontent.com/108354947/180101190-87bb8952-15b2-44a4-9d64-6c608db11c23.gif)
 
 
