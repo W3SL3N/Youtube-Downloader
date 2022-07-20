@@ -45,8 +45,7 @@ class Diretorio():
 
                 while cond == 0:
 
-                    diretorio = (input('\n>>> ').strip())
-
+                    diretorio = (input('\033[1;33m' + '\n>>> ' + '\033[0;0m').strip())
 
                     existe_disco = Diretorio.existe_disco(diretorio)
 
