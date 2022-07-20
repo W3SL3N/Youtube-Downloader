@@ -17,6 +17,9 @@ class Video(Cabecalho):
     @staticmethod
     def vid_play():
 
+        amarelo = '\033[1;33m'
+        reset = '\033[0;0m'     
+   
         sim = ['sim', 's']
         nao = ['nao', 'não', 'n']
 
@@ -24,12 +27,17 @@ class Video(Cabecalho):
 
         while cond == 0:
 
-            define = input(' ' * 17 + 'Você vai baixar uma playlist? (S/n): ').lower().strip()
+            define = input(' ' * 17 + 'Você vai baixar uma playlist?' + (amarelo + '(S/n)' + reset) + ': ')\
+                                                                                            .lower().strip()
 
             if define in sim:
                 playlist = PlaylistVid()
+                cond += 1
+                
             if define in nao:
                 musica = UmVideo()
+                cond += 1
+                
             else:
                 continue
 
