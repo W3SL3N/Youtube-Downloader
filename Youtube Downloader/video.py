@@ -9,6 +9,7 @@ from progresso import Progresso
 from continuar import Continuar
 from cabecalho import Cabecalho
 
+
 class Video(Cabecalho):
     def __init__(self):
         self.cabecalho(titulo='vídeos')
@@ -16,10 +17,9 @@ class Video(Cabecalho):
 
     @staticmethod
     def vid_play():
-
         amarelo = '\033[1;33m'
-        reset = '\033[0;0m'     
-   
+        reset = '\033[0;0m'
+
         sim = ['sim', 's']
         nao = ['nao', 'não', 'n']
 
@@ -33,11 +33,11 @@ class Video(Cabecalho):
             if define in sim:
                 playlist = PlaylistVid()
                 cond += 1
-                
+
             if define in nao:
                 musica = UmVideo()
                 cond += 1
-                
+
             else:
                 continue
 
@@ -88,7 +88,7 @@ class UmVideo(Continuar, Diretorio, Progresso, Cabecalho):
     def qualidades(self, dict):
         amarelo = '\033[1;33m'
         reset = '\033[0;0m'
-        
+
         print(f'\nTítulo: {YouTube(self.url).title}')
 
         print('\nQualidades disponíveis:\n')
@@ -131,7 +131,7 @@ class UmVideo(Continuar, Diretorio, Progresso, Cabecalho):
 
         try:
             YouTube(url, self.em_progresso)\
-                .streams.get_by_resolution(resolucao)\
+                .streams.filter(resolution=resolucao, progressive=True).first()\
                 .download(output_path=diretorio)
 
         except IncompleteRead:
