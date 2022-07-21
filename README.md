@@ -42,7 +42,7 @@
 ![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180072901-5e605ff6-7927-4d20-b219-dac5dbf3ae37.png)
 ![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180069032-93a2d97c-ce39-4714-8ead-7e2fe029712a.png)
 
-### Sistemas operacionais suportados:
+### :computer: Sistemas operacionais suportados:
 
 - `Windows`--> Testado.
 - `Linux`----> Testado.
@@ -71,7 +71,7 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 #### Primeiro método 
 
 1° - Tenha a última versão do Python em sua máquina, caso contrario, baixe e instale seguindo as intruções do [site oficial do python](https://www.python.org/).<br/>
-2° - instale o módulo pytube.
+2° - instale o módulo pytube.<br/>
 3° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.zip).<br/>
 4° - Extraia todos para o mesmo diretorio utilizando o programa de sua preferência.<br/>
 5° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
