@@ -6,6 +6,7 @@
 
 ## Índice:
 - [Funcionalidades](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#gear-funcionalidades)
+- [Sistemas operacionais suportados](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#sistemas-operacionais-suportados)
 - [Bibliotecas utilizadas](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#books-bibliotecas-utilizadas)
 - [Acesso ao projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#file_folder-acesso-ao-projeto)
 - [Rodar o projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#arrow_forward-rodar-o-projeto)
@@ -23,10 +24,10 @@
 ![download de um .mp3](https://user-images.githubusercontent.com/108354947/180072545-a1abdf93-c5bf-4b46-8cc1-1802dead4021.png)
 
 - `playlists`:  Fazer o download de **playlists** de **.mp3** e **.mp4** <br/>(cuja a qualidade destas está automaticamente apontada para o máximo)
-![download de uma playlist](https://user-images.githubusercontent.com/108354947/180073563-b8df7208-4e25-4992-963a-4875216b9e15.png)
+![image](https://user-images.githubusercontent.com/108354947/180302922-e7b6a929-9cd0-49b7-ae27-4ebb0f624f4d.png)
 
 - `diretórios`:  Permitir que o usuário **defina um diretório** para o seu download;
-![input para o usuário definir um diretório](https://user-images.githubusercontent.com/108354947/180068068-80166cd4-19da-4f7d-9013-bb26395f415c.png)
+![image](https://user-images.githubusercontent.com/108354947/180302486-0f15d081-6cda-4ab8-952f-9756ab732141.png)
 
 - `verificações de entrada`:  Verificar se as **entradas do usuário são válidas**; 
 ![mensagem de entrada inválida](https://user-images.githubusercontent.com/108354947/180074013-8d8600f7-c670-4e51-9bf2-6478556a0414.png)
@@ -41,6 +42,14 @@
 ![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180072901-5e605ff6-7927-4d20-b219-dac5dbf3ae37.png)
 ![mensagem de perca de falha na conexão](https://user-images.githubusercontent.com/108354947/180069032-93a2d97c-ce39-4714-8ead-7e2fe029712a.png)
 
+### Sistemas operacionais suportados:
+
+- `Windows`--> Testado.
+- `Linux`----> Não testado.
+- `MacOs`----> Não testado.
+
+###### As bibliotecas `Path` e `platform` inspiraram a ideia de adaptar o script para sistemas operacionais além do Windows, <br/>`platform` identifica o sistema para adaptar certas funcionalidades que funcionavam apenas no `Windows`, enquanto <br/>`Path` é responsável por lidar com os diretórios, que diferem em organização e caracteres entre as plataformas `Windows`, `Linux` e `MacOs`.
+
 ### :books: Bibliotecas utilizadas:
 
 `Pytube`
@@ -50,6 +59,8 @@
 `time`
 `urllib`
 `http.client`
+`platform`
+`Path`
 
 ### :file_folder: Acesso ao projeto:
 
@@ -58,7 +69,6 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 ### :arrow_forward: Rodar o projeto:
 
 #### Primeiro método 
-###### (recomendado para devs que queiram fazer alterações nos arquivos)
 
 1° - Tenha a última versão do Python em sua máquina, caso contrario, baixe e instale seguindo as intruções do [site oficial do python](https://www.python.org/).<br/>
 2° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.zip).<br/>
@@ -66,28 +76,12 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 4° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
 5° - Faça bom uso da sua nova ferramenta.
 
-#### Segundo método 
-###### (recomendado para quem quer utilizar a ferramenta em seu estádo atual)
+#### Segundo método (windows)
 
 1° - Baixe o **YT_Downloader.exe** [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe).<br/>
 2° - Abra-o em sua máquina.<br/>
 3° - Se aparecer o aviso 'O Windows protegeu o computador', clique em 'Mais informações' e 'Executar assim mesmo'.<br/>
 4° - Faça bom uso da sua nova ferramenta.<br/>
-
-
-### :warning: Aviso importante:
-
-Para usuários Linux ou MacOs, alterar a linha 6 do arquivo cabecalho.py, que está assim:
-
-```
-os.system('cls')
-```
-
-Altere para:
-
-```
-os.system('clear')
-```
 
 ### :jigsaw: Obejtivos do projeto:
 
