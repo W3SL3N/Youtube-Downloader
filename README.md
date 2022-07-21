@@ -45,7 +45,7 @@
 ### Sistemas operacionais suportados:
 
 - `Windows`--> Testado.
-- `Linux`----> Não testado.
+- `Linux`----> Testado.
 - `MacOs`----> Não testado.
 
 ###### As bibliotecas `Path` e `platform` inspiraram a ideia de adaptar o script para sistemas operacionais além do Windows, <br/>`platform` identifica o sistema para adaptar certas funcionalidades que funcionavam apenas no `Windows`, enquanto <br/>`Path` é responsável por lidar com os diretórios, que diferem em organização e caracteres entre as plataformas `Windows`, `Linux` e `MacOs`.
@@ -71,10 +71,11 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 #### Primeiro método 
 
 1° - Tenha a última versão do Python em sua máquina, caso contrario, baixe e instale seguindo as intruções do [site oficial do python](https://www.python.org/).<br/>
-2° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.zip).<br/>
-3° - Extraia todos para o mesmo diretorio utilizando o programa de sua preferência.<br/>
-4° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
-5° - Faça bom uso da sua nova ferramenta.
+2° - instale o módulo pytube.
+3° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.zip).<br/>
+4° - Extraia todos para o mesmo diretorio utilizando o programa de sua preferência.<br/>
+5° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
+6° - Faça bom uso da sua nova ferramenta.
 
 #### Segundo método (windows)
 
