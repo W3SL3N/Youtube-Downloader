@@ -80,6 +80,16 @@ class UmVideo(Continuar, Diretorio, Progresso, Cabecalho):
             time.sleep(2)
             video = UmVideo()
 
+        except pytube.exceptions.ExtractError:
+            print('\nURL inválida! Verifique e tente novamente...\n\n')
+            time.sleep(2)
+            video = UmVideo()
+
+        except pytube.exceptions.VideoUnavailable:
+            print('Essa URL não é um vídeo ou não está disponível.')
+            time.sleep(2)
+            video = UmVideo()
+
         else:
             self.qualidades(dict=dict)
             self.baixar(url=self.url, resolucao=self.opcao(dict=dict))
