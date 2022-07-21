@@ -1,13 +1,14 @@
 from urllib.error import URLError
 from http.client import IncompleteRead, RemoteDisconnected
 import pytube.exceptions
-from pytube import YouTube, Playlist
+from pytube import YouTube, Playlist, helpers
 import time, sys, re
 
 from diretorio import Diretorio
 from progresso import Progresso
 from continuar import Continuar
 from cabecalho import Cabecalho
+
 
 class Musica(Cabecalho):
 
@@ -17,7 +18,6 @@ class Musica(Cabecalho):
 
     @staticmethod
     def mus_play():
-        
         amarelo = '\033[1;33m'
         reset = '\033[0;0m'
 
@@ -34,11 +34,11 @@ class Musica(Cabecalho):
             if define in sim:
                 playlist = PlaylistMus()
                 cond += 1
-                
+
             if define in nao:
                 musica = UmaMusica()
                 cond += 1
-                
+
             else:
                 continue
 
@@ -84,7 +84,7 @@ class UmaMusica(Continuar, Diretorio, Progresso, Cabecalho):
     def qualidades(self, dict):
         amarelo = '\033[1;33m'
         reset = '\033[0;0m'
-        
+
         print(f'\nTítulo: {YouTube(self.url).title}')
 
         print('\nQualidades disponíveis:\n')
@@ -125,7 +125,7 @@ class UmaMusica(Continuar, Diretorio, Progresso, Cabecalho):
         print('\n', end='')
 
         nome = YouTube(url).title
-        nome = nome.replace('"', '“').replace("'", "′").replace('/', ' ').replace('|', ' ').replace('~', '-')
+        nome = helpers.safe_filename(nome)
 
         try:
             YouTube(url, self.em_progresso)\
@@ -182,8 +182,7 @@ class PlaylistMus(Continuar, Progresso, Diretorio, Cabecalho):
         for url in urls:
 
             nome = YouTube(url).title
-
-            nome = nome.replace('"', '“').replace("'", "′").replace('/', ' ').replace('~', '-').replace('|', ' ')
+            nome = helpers.safe_filename(nome)
 
             print('-' * 70)
             print(f'\n{nome}\n')
