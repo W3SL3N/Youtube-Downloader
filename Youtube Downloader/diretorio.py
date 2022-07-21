@@ -6,13 +6,27 @@ class Diretorio:
     @staticmethod
     def existe_disco(disco):
 
-        padrao = '[A-Za-z]{1,}[^A-Za-z]'
+        op = platform.system().lower()
 
-        procura = re.findall(padrao, disco)
+        if op == 'windows':
 
-        existe = os.path.isdir(procura[0])
+            padrao = '[A-Za-z]{1,}[^A-Za-z]'
 
-        return existe
+            procura = re.findall(padrao, disco)
+
+            existe = os.path.isdir(procura[0])
+
+            return existe
+
+        else:
+
+            padrao = '[^A-Za-z]?[A-Za-z]{1,}[^A-Za-z]'
+
+            procura = re.findall(padrao, disco)
+
+            existe = os.path.isdir(procura[0])
+
+            return existe
 
     @staticmethod
     def existe_diretorio(caminho):
@@ -24,15 +38,21 @@ class Diretorio:
         reset = '\033[0;0m'
 
         op = platform.system().lower()
-        if op == 'windows' or 'darwin':
+        if op == 'windows':
             caminho = Path(Path.home(), 'yt downloader', f'{nome}'.lower())
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
                                   ' :' + ' *' + ' ?' + ' "' + " '" + ' <' + ' >' + ' |'
-        else:
+
+        elif op == 'linux':
             caminho = Path(Path.home(), 'yt_downloader', f'{nome}'.lower())
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
                                   ' !' + ' @' + ' #' + ' $' + ' %' + ' ^' + ' &' + ' *' + ' (' + ' )' + \
                      (' ' * 49) + ' [' + ' ]' + ' {' + ' }' + " '" + ' "' + ' |' + ' ;' + ' <' + ' >'
+
+        else:
+            caminho = Path(Path.home(), 'yt downloader', f'{nome}'.lower())
+            caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
+                                  ' :' + ' *' + ' ?' + ' "' + " '" + ' <' + ' >' + ' |'
 
         print(f'\nPasta padrão para o download: {caminho}')
 
