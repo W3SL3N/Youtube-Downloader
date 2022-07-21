@@ -76,6 +76,11 @@ class UmaMusica(Continuar, Diretorio, Progresso, Cabecalho):
             time.sleep(2)
             musica = UmaMusica()
 
+        except pytube.exceptions.VideoUnavailable:
+            print('Essa URL não é um vídeo ou não está disponível.')
+            time.sleep(2)
+            musica = UmaMusica()
+
         else:
             self.qualidades(dict=dict)
             self.baixar(url=self.url, qualidade=self.opcao(dict=dict))
