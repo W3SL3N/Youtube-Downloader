@@ -1,34 +1,40 @@
-import os
-
+import os, re, platform
+from pathlib import Path
 
 class Diretorio:
 
     @staticmethod
     def existe_disco(disco):
 
-        procura = disco[0:3]
+        padrao = '[A-Za-z]{1,}[^A-Za-z]'
 
-        existe = os.path.isdir(procura)
+        procura = re.findall(padrao, disco)
+
+        existe = os.path.isdir(procura[0])
 
         return existe
 
     @staticmethod
-    def verifica_sintaxe(caminho):
-
-        caracteres_proibidos = [':', '*', '?', '"', '<', '>', '|']
-        compara = set(caminho[3:]) & set(caracteres_proibidos)
-
-        if len(compara) > 0:
-            return False
-        else:
-            return True
+    def existe_diretorio(caminho):
+        return os.path.isdir(caminho)
 
     def diretorio(self, nome):
 
         amarelo = '\033[1;33m'
         reset = '\033[0;0m'
 
-        print(f'\nPasta padrão para o download: D:\YT Downloader\\{nome}')
+        op = platform.system().lower()
+        if op == 'windows' or 'darwin':
+            caminho = Path(Path.home(), 'yt downloader', f'{nome}'.lower())
+            caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
+                                  ' :' + ' *' + ' ?' + ' "' + " '" + ' <' + ' >' + ' |'
+        else:
+            caminho = Path(Path.home(), 'yt_downloader', f'{nome}'.lower())
+            caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
+                                  ' !' + ' @' + ' #' + ' $' + ' %' + ' ^' + ' &' + ' *' + ' (' + ' )' + \
+                     (' ' * 49) + ' [' + ' ]' + ' {' + ' }' + " '" + ' "' + ' |' + ' ;' + ' <' + ' >'
+
+        print(f'\nPasta padrão para o download: {caminho}')
 
         cond = 0
 
@@ -38,7 +44,9 @@ class Diretorio:
             nao = ['não', 'nao', 'n']
             pergunta = input('Mudar pasta?' + (amarelo + '(S/n)' + reset) + ': ').lower().strip()
 
-            diretorio = f'D:\\YT Downloader\\{nome}'
+            diretorio = Path(Path.home(), 'YT Downloader', f'{nome}')
+            diretorio = os.path.normpath(diretorio)
+            diretorio = os.path.normcase(diretorio)
 
             if pergunta in nao:
                 return diretorio
@@ -50,19 +58,26 @@ class Diretorio:
 
                     diretorio = (input(amarelo + '\n>>> ' + reset).strip())
 
+                    diretorio = os.path.normpath(diretorio)
+                    diretorio = os.path.normcase(diretorio)
 
                     existe_disco = Diretorio.existe_disco(diretorio)
 
                     if existe_disco:
-                        verifica_sintaxe = Diretorio.verifica_sintaxe(diretorio)
 
-                        if verifica_sintaxe == True:
+                        verifica_diretorios = Diretorio.existe_diretorio(diretorio)
+
+                        if verifica_diretorios == True:
                             return diretorio
 
                         else:
-                            print('\nO nome da pasta não pode conter esses caracteres:', ':', '*', '?', '"', "'", '<', '>',
-                                  '|')
-                            continue
+                            try:
+                                novo = os.mkdir(diretorio)
+                                return  Path(novo)
+
+                            except OSError:
+                                print(caracteres_invalios)
+                                continue
 
                     if not existe_disco:
                         print('\nO disco local informado não existe...')
@@ -74,5 +89,3 @@ class Diretorio:
                 continue
 
             cond += 1
-
-
