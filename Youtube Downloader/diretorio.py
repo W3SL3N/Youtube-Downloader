@@ -13,18 +13,25 @@ class Diretorio:
             padrao = '[A-Za-z]{1,}[^A-Za-z]'
 
             procura = re.findall(padrao, disco)
+            try:
+                existe = os.path.isdir(procura[0])
 
-            existe = os.path.isdir(procura[0])
+            except IndexError:
+                existe = False
 
             return existe
 
         else:
 
-            padrao = '[^A-Za-z]?[A-Za-z]{1,}[^A-Za-z]'
+            padrao = '[^A-Za-z]{1}[A-Za-z]{1,}[^A-Za-z]'
 
             procura = re.findall(padrao, disco)
 
-            existe = os.path.isdir(procura[0])
+            try:
+                existe = os.path.isdir(procura[0])
+
+            except IndexError:
+                existe = False
 
             return existe
 
@@ -43,11 +50,15 @@ class Diretorio:
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
                                   ' :' + ' *' + ' ?' + ' "' + " '" + ' <' + ' >' + ' |'
 
+            local_invalido = '\nO disco local informado não existe...'
+
         elif op == 'linux':
             caminho = Path(Path.home(), 'yt_downloader', f'{nome}'.lower())
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
-                                  ' !' + ' @' + ' #' + ' $' + ' %' + ' ^' + ' &' + ' *' + ' (' + ' )' + \
+                                  ' !' + ' @' + ' #' + ' $' + ' %' + ' ^' + ' &' + ' *' + ' (' + ' )\n' + \
                      (' ' * 49) + ' [' + ' ]' + ' {' + ' }' + " '" + ' "' + ' |' + ' ;' + ' <' + ' >'
+
+            local_invalido = '\nLocal para download não permitido ou inexistente.'
 
         else:
             caminho = Path(Path.home(), 'yt downloader', f'{nome}'.lower())
@@ -93,14 +104,15 @@ class Diretorio:
                         else:
                             try:
                                 novo = os.mkdir(diretorio)
-                                return  Path(novo)
+                                print('oi')
+                                return diretorio
 
                             except OSError:
                                 print(caracteres_invalios)
                                 continue
 
                     if not existe_disco:
-                        print('\nO disco local informado não existe...')
+                        print(local_invalido)
                         continue
 
                     cond += 1
