@@ -1,3 +1,5 @@
+# coding: UTF-8
+
 from video import Video
 from musica import Musica
 
