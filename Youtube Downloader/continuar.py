@@ -1,11 +1,12 @@
 import os
 
+
 class Continuar:
 
     def continuar(self, classe):
         amarelo = '\033[1;33m'
         reset = '\033[0;0m'
-        
+
         condicao = 0
         while condicao == 0:
             sim = ['sim', 's']
@@ -18,12 +19,12 @@ class Continuar:
                 condicao += 1
 
             if continuar in nao:
-                os.system(command=exit())
+                break
 
     def tentar_novamente(self, classe):
         amarelo = '\033[1;33m'
-        reset = '\033[0;0m'        
-        
+        reset = '\033[0;0m'
+
         condicao = 0
         while condicao == 0:
             sim = ['sim', 's']
@@ -36,7 +37,7 @@ class Continuar:
                 condicao += 1
 
             if continuar in nao:
-                os.system(command=exit())
-               
+                break
+
             else:
                 continue
