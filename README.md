@@ -2,7 +2,7 @@
 ![Status do Projeto: Desenvolvimento](https://img.shields.io/badge/status-Finalizado-blue)
 ![Meu Twitter](https://img.shields.io/twitter/url?label=%40W3SL3N&style=social&url=https%3A%2F%2Ftwitter.com%2FW3SL3N)
 
-*Um script Python baseado em Pytube para o download de áudios, vídeos e playlists, do Youtube de maneira clara, amigável e objetiva.*
+*Um script Python multiplataforma baseado em Pytube para o download de áudios, vídeos e playlists do Youtube de maneira clara, amigável e objetiva.*
 
 ## Índice:
 - [Funcionalidades](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#gear-funcionalidades)
@@ -68,7 +68,7 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 
 ### :arrow_forward: Rodar o projeto:
 
-#### Primeiro método 
+#### Método 1 
 
 1° - Tenha a última versão do Python em sua máquina, caso contrario, baixe e instale seguindo as intruções do [site oficial do python](https://www.python.org/).<br/>
 2° - instale o módulo pytube.<br/>
@@ -77,11 +77,21 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 5° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
 6° - Faça bom uso da sua nova ferramenta.
 
-#### Segundo método (windows)
+#### Método 2.1 (Windows)
 
-1° - Baixe o **YT_Downloader.exe** [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe).<br/>
+1° - Baixe [**YT_Downloader.exe**](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe).<br/>
 2° - Abra-o em sua máquina.<br/>
 3° - Se aparecer o aviso 'O Windows protegeu o computador', clique em 'Mais informações' e 'Executar assim mesmo'.<br/>
+4° - Faça bom uso da sua nova ferramenta.<br/>
+
+#### Método 2.2 (Linux)
+
+1° - Baixe [**YT_Downloader**](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader).<br/>
+2° - Acesse o diretório onde está **YT_Downloader** através do terminal.<br/>
+3° - Digite:
+```
+./YT_Downloader
+```
 4° - Faça bom uso da sua nova ferramenta.<br/>
 
 ### :jigsaw: Obejtivos do projeto:
