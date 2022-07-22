@@ -1,10 +1,10 @@
 import os, re, platform
-from pathlib import Path
+from pathlib import Path, PureWindowsPath, PurePath
 
 class Diretorio:
 
     @staticmethod
-    def existe_disco(disco):
+    def unidade_disponivel(unidade):
 
         op = platform.system().lower()
 
@@ -12,7 +12,7 @@ class Diretorio:
 
             padrao = '[A-Za-z]{1,}[^A-Za-z]'
 
-            procura = re.findall(padrao, disco)
+            procura = re.findall(padrao, unidade)
             try:
                 existe = os.path.isdir(procura[0])
 
@@ -25,7 +25,7 @@ class Diretorio:
 
             padrao = '[^A-Za-z]{1}[A-Za-z]{1,}[^A-Za-z]'
 
-            procura = re.findall(padrao, disco)
+            procura = re.findall(padrao, unidade)
 
             try:
                 existe = os.path.isdir(procura[0])
@@ -46,14 +46,16 @@ class Diretorio:
 
         op = platform.system().lower()
         if op == 'windows':
-            caminho = Path(Path.home(), 'yt downloader', f'{nome}'.lower())
+            caminho = PureWindowsPath(Path.home(), 'yt downloader', f'{nome}'.lower())
+
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
                                   ' :' + ' *' + ' ?' + ' "' + " '" + ' <' + ' >' + ' |'
 
             local_invalido = '\nO disco local informado não existe...'
 
         elif op == 'linux':
-            caminho = Path(Path.home(), 'yt_downloader', f'{nome}'.lower())
+            caminho = PurePath(Path.home(), 'yt_downloader', f'{nome}'.lower())
+
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
                                   ' !' + ' @' + ' #' + ' $' + ' %' + ' ^' + ' &' + ' *' + ' (' + ' )\n' + \
                      (' ' * 49) + ' [' + ' ]' + ' {' + ' }' + " '" + ' "' + ' |' + ' ;' + ' <' + ' >'
@@ -61,9 +63,12 @@ class Diretorio:
             local_invalido = '\nLocal para download não permitido ou inexistente.'
 
         else:
-            caminho = Path(Path.home(), 'yt downloader', f'{nome}'.lower())
+            caminho = PurePath(Path.home(), 'yt downloader', f'{nome}'.lower())
+
             caracteres_invalios = '\nO nome da pasta não pode conter esses caracteres:' + \
                                   ' :' + ' *' + ' ?' + ' "' + " '" + ' <' + ' >' + ' |'
+
+            local_invalido = '\nLocal para download não permitido ou inexistente.'
 
         print(f'\nPasta padrão para o download: {caminho}')
 
@@ -75,9 +80,7 @@ class Diretorio:
             nao = ['não', 'nao', 'n']
             pergunta = input('Mudar pasta?' + (amarelo + '(S/n)' + reset) + ': ').lower().strip()
 
-            diretorio = Path(Path.home(), 'YT Downloader', f'{nome}')
-            diretorio = os.path.normpath(diretorio)
-            diretorio = os.path.normcase(diretorio)
+            diretorio = caminho
 
             if pergunta in nao:
                 return diretorio
@@ -92,9 +95,9 @@ class Diretorio:
                     diretorio = os.path.normpath(diretorio)
                     diretorio = os.path.normcase(diretorio)
 
-                    existe_disco = Diretorio.existe_disco(diretorio)
+                    unidade_disponivel = Diretorio.unidade_disponivel(diretorio)
 
-                    if existe_disco:
+                    if unidade_disponivel:
 
                         verifica_diretorios = Diretorio.existe_diretorio(diretorio)
 
@@ -104,14 +107,14 @@ class Diretorio:
                         else:
                             try:
                                 novo = os.mkdir(diretorio)
-                                print('oi')
+
                                 return diretorio
 
                             except OSError:
                                 print(caracteres_invalios)
                                 continue
 
-                    if not existe_disco:
+                    if not unidade_disponivel:
                         print(local_invalido)
                         continue
 
