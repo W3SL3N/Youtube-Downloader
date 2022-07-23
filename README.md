@@ -6,7 +6,7 @@
 
 ## Índice:
 - [Funcionalidades](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#gear-funcionalidades)
-- [Sistemas operacionais suportados](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#sistemas-operacionais-suportados)
+- [Sistemas operacionais suportados](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#computer-sistemas-operacionais-suportados)
 - [Bibliotecas utilizadas](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#books-bibliotecas-utilizadas)
 - [Acesso ao projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#file_folder-acesso-ao-projeto)
 - [Rodar o projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#arrow_forward-rodar-o-projeto)
