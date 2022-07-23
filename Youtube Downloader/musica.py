@@ -2,7 +2,7 @@ from urllib.error import URLError
 from http.client import IncompleteRead, RemoteDisconnected
 import pytube.exceptions
 from pytube import YouTube, Playlist, helpers
-import time, sys, re
+import time, sys, re, platform
 
 from diretorio import Diretorio
 from progresso import Progresso
@@ -132,6 +132,13 @@ class UmaMusica(Continuar, Diretorio, Progresso, Cabecalho):
         nome = YouTube(url).title
         nome = helpers.safe_filename(nome)
 
+        op = platform.system().lower()
+
+        if op == 'windows':
+            nome = nome
+        else:
+            nome = nome.replace(' ', '_')
+
         try:
             YouTube(url, self.em_progresso)\
                 .streams.filter(abr=qualidade).first()\
@@ -188,6 +195,13 @@ class PlaylistMus(Continuar, Progresso, Diretorio, Cabecalho):
 
             nome = YouTube(url).title
             nome = helpers.safe_filename(nome)
+
+            op = platform.system().lower()
+
+            if op == 'windows':
+                nome = nome
+            else:
+                nome = nome.replace(' ', '_')
 
             print('-' * 70)
             print(f'\n{nome}\n')

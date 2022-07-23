@@ -1,8 +1,8 @@
 from urllib.error import URLError
 from http.client import IncompleteRead,RemoteDisconnected
-from pytube import YouTube, Playlist
+from pytube import YouTube, Playlist, helpers
 import pytube.exceptions
-import time, sys, re
+import time, sys, re, platform
 
 from diretorio import Diretorio
 from progresso import Progresso
@@ -134,15 +134,24 @@ class UmVideo(Continuar, Diretorio, Progresso, Cabecalho):
         return opcao
 
     def baixar(self, url, resolucao):
-
         diretorio = self.diretorio(nome='Vídeos')
 
         print('\n', end='')
 
+        nome = YouTube(url).title
+        nome = helpers.safe_filename(nome)
+
+        op = platform.system().lower()
+
+        if op == 'windows':
+            nome = nome
+        else:
+            nome = nome.replace(' ', '_')
+
         try:
             YouTube(url, self.em_progresso)\
                 .streams.filter(resolution=resolucao, progressive=True).first()\
-                .download(output_path=diretorio)
+                .download(output_path=diretorio, filename=f'{nome}.mp4')
 
         except IncompleteRead:
             print('\n\nDownload incompleto, verifque sua conexão e tente novamente...', end='')
@@ -194,14 +203,20 @@ class PlaylistVid(Continuar, Diretorio, Cabecalho, Progresso):
         for url in urls:
 
             nome = YouTube(url).title
+            nome = helpers.safe_filename(nome)
 
-            nome = nome.replace('"', '“').replace("'", "′").replace('/', ' ').replace('~', '-')
+            op = platform.system().lower()
+
+            if op == 'windows':
+                nome = nome
+            else:
+                nome = nome.replace(' ', '_')
 
             print('-' * 70)
             print(f'\n{nome}\n')
             try:
                 YouTube(url, self.em_progresso).streams.get_highest_resolution()\
-                    .download(output_path=diretorio, max_retries=5)
+                    .download(output_path=diretorio, max_retries=5, filename=f'{nome}.mp4')
                 print('\n')
 
             except KeyError:
