@@ -10,7 +10,6 @@
 - [Bibliotecas utilizadas](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#books-bibliotecas-utilizadas)
 - [Acesso ao projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#file_folder-acesso-ao-projeto)
 - [Rodar o projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#arrow_forward-rodar-o-projeto)
-- [Aviso importante](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#warning-aviso-importante)
 - [Obejtivos do projeto](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#jigsaw-obejtivos-do-projeto)
 - [Tecnologias utilizadas](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#hammer_and_wrench-tecnonologias-utilizadas)
 - [Script em funcionamento](https://github.com/W3SL3N/Youtube-Downloader/blob/main/README.md#fast_forward-script-em-funcionamento)
