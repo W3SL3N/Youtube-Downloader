@@ -1,6 +1,5 @@
 # Youtube-Downloader
 ![Status do Projeto: Desenvolvimento](https://img.shields.io/badge/status-Finalizado-blue)
-![Meu Twitter](https://img.shields.io/twitter/url?label=%40W3SL3N&style=social&url=https%3A%2F%2Ftwitter.com%2FW3SL3N)
 
 *Um script Python multiplataforma baseado em Pytube para o download de áudios, vídeos e playlists do Youtube de maneira clara, amigável e objetiva.*
 
