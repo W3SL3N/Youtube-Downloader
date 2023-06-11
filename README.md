@@ -75,23 +75,6 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 5° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
 6° - Faça bom uso da sua nova ferramenta.
 
-#### Método 2.1 (Windows)
-
-1° - Baixe [**YT_Downloader.exe**](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.exe).<br/>
-2° - Abra-o em sua máquina.<br/>
-3° - Se aparecer o aviso 'O Windows protegeu o computador', clique em 'Mais informações' e 'Executar assim mesmo'.<br/>
-4° - Faça bom uso da sua nova ferramenta.<br/>
-
-#### Método 2.2 (Linux)
-
-1° - Baixe [**YT_Downloader**](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader).<br/>
-2° - Acesse o diretório onde está **YT_Downloader** através do terminal.<br/>
-3° - Digite:
-```
-./YT_Downloader
-```
-4° - Faça bom uso da sua nova ferramenta.<br/>
-
 ### :jigsaw: Obejtivos do projeto:
 
 - Consolidar conhecimentos e praticar habilidades em Python;
