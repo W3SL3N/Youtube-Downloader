@@ -70,7 +70,7 @@ Clique [aqui](https://github.com/W3SL3N/Youtube-Downloader/tree/main/Youtube%20D
 
 1° - Tenha a última versão do Python em sua máquina, caso contrario, baixe e instale seguindo as intruções do [site oficial do python](https://www.python.org/).<br/>
 2° - instale o módulo pytube.<br/>
-3° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/raw/main/YT_Downloader.zip).<br/>
+3° - Baixe o .zip com todos os arquivos.py do projeto [clicando aqui](https://github.com/W3SL3N/Youtube-Downloader/archive/refs/heads/main.zip).<br/>
 4° - Extraia todos para o mesmo diretorio utilizando o programa de sua preferência.<br/>
 5° - Abra o **YT_Downloader.py** com o python de sua máquina.<br/>
 6° - Faça bom uso da sua nova ferramenta.
